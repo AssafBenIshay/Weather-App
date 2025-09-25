@@ -16,18 +16,13 @@ export default function CurrentForecast({
 
 	React.useEffect(() => {
 		if (hasWD) {
-
-
 			const weatherCodeNumber = weatherData?.hourly.weather_code[currentHourAtLocation]
 			const weatherCurrentTemp = weatherData?.hourly.temperature_2m[currentHourAtLocation]
 
 			setWeatherCode(weatherTypeMapping[weatherCodeNumber.toString()])
 			setWeatherTemp(weatherCurrentTemp)
 		}
-		// else {
-		// 	setApiError(true)
-		// }
-	}, [weatherData]) //!state before update
+	}, [currentHourAtLocation, hasWD, weatherData])
 
 	return (
 		<>

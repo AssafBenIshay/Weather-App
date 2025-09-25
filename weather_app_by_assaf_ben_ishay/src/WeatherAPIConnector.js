@@ -17,14 +17,15 @@ export const connectWeatherAPI = async (city) => {
 }
 
 export const getWeatherAPI = async (lat, lon) => {
+    
     const url = BASE_URL.replace('{lat}', lat.toString()).replace('{lon}', lon.toString())
     const response = await fetch(url);
     const data = await response.json();
+    
     return data;
 }
 
 export const getMeanWeatherAPI = async (lat, lon) => {
-    if (!lat || !lon) return null
 
     const url = MEAN_URL.replace('{lat}', lat.toString()).replace('{lon}', lon.toString())
     const response = await fetch(url);

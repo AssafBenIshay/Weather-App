@@ -5,7 +5,6 @@ export const cityList = async () => {
   try {
     const response = await fetch(url);
 
-    // Check if the response is OK (status code 200–299)
     if (!response.ok) {
       console.error(`HTTP error! Status: ${response.status}`);
       hasAnAPIError = true
@@ -32,7 +31,6 @@ export const cityList = async () => {
       }
     });
     return citiesCountry
-    //return cities;
   } catch (error) {
           console.error('Failed to fetch cities list:', (error).message);
           hasAnAPIError = true

@@ -57,7 +57,6 @@ export default function HourlyForecast({
 			const cHAL = Number(currentHourAtLocation)
 
 			for (let i = 0; i < 8; i++) {
-				// if (cHAL + i > 24) {
 				function PmAm(i) {
 					if ((cHAL + i) % 24 === 0) {
 						const hour = `Midnight 🌛`

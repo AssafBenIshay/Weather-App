@@ -109,7 +109,6 @@ export default function Dashboard({
 		}
 		setCurrentHourAtLocation(currentOverThereHour)
 	}, [hasWD, latAndLon, weatherData])
-	//}, [hasWD, weatherData]) //! before fix
 
 	return searchOn ? (
 		<>

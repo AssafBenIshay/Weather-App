@@ -89,11 +89,6 @@
     text-indent: 16px;
 }
 
-.search-input:is(:autofill, :autofill:hover, :autofill:focus, :autofill:active) {
-    transition: background-color 1s ease-in-out 0s;
-    -webkit-text-fill-color: var(--Blue700);
-    -webkit-text-stroke-color: var(--Blue500);
-}
 
 .search-icon {
     position: absolute;

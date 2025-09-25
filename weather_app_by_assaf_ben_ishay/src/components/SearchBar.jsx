@@ -131,11 +131,11 @@ export default function SearchBar({
 				onKeyDown={(e) => handleDelete(e)}
 				value={val}
 				id='search-input'
+				autoComplete="off"
 			/>
 			<button
-				className={`search-button ${
-					cList?.length > 0 && val.includes("::") ? "active" : ""
-				}`}
+				className={`search-button ${cList?.length > 0 && val.includes("::") ? "active" : ""
+					}`}
 				onClick={() => handleClick()}
 			>
 				Search

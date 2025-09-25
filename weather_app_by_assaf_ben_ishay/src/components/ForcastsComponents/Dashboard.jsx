@@ -50,8 +50,10 @@ export default function Dashboard({
 		async function receiveWeatherData() {
 			const wd = await getWeatherAPI(latAndLon[0], latAndLon[1])
 			if (!wd) {
-				setApiError(true)
-				return
+				setTimeout(() => {
+					setApiError(true)
+					return
+				}, 2000);
 			} else {
 				setWeatherData(wd)
 				setHasWD(true)

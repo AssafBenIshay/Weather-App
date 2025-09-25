@@ -17,18 +17,30 @@ export const connectWeatherAPI = async (city) => {
 }
 
 export const getWeatherAPI = async (lat, lon) => {
-    
-    const url = BASE_URL.replace('{lat}', lat.toString()).replace('{lon}', lon.toString())
-    const response = await fetch(url);
-    const data = await response.json();
-    
-    return data;
+
+    try {
+        const url = BASE_URL.replace('{lat}', lat.toString()).replace('{lon}', lon.toString())
+        const response = await fetch(url);
+        const data = await response.json();
+
+        return data
+
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        return null;
+    }
 }
 
 export const getMeanWeatherAPI = async (lat, lon) => {
 
-    const url = MEAN_URL.replace('{lat}', lat.toString()).replace('{lon}', lon.toString())
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
+    try {
+        const url = MEAN_URL.replace('{lat}', lat.toString()).replace('{lon}', lon.toString())
+        const response = await fetch(url);
+        const data = await response.json();
+
+        return data;
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        return null;
+    }
 }

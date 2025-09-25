@@ -52,7 +52,7 @@ function App() {
 		<>
 			<div id="app" style={introAnimation ? unmount : {}}>
 				<div className="logo-menu">
-					<img src={LOGO} />
+					<img src={LOGO} alt='logo'/>
 					<DropDown imperial={imperial} setImperial={setImperial} />
 				</div>
 				{!apiError ? (

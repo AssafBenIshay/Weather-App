@@ -123,7 +123,7 @@ export default function SearchBar({
 
 	return (
 		<div className="search-div">
-			<img src={MGLASS} className="search-icon" />
+			<img src={MGLASS} className="search-icon" alt='magnifying-glass'/>
 			<input
 				placeholder="Search for a place..."
 				className="search-input"

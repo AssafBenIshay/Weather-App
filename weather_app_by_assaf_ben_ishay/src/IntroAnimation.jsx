@@ -19,7 +19,7 @@ export default function IntroAnimation({ introAnimation, setIntroAnimation }) {
 			<h1 className="intro-title">WELCOME</h1>
 		</div>
 			<div className='intro-logo-container' style={introAnimation ? logoRoll : ""}>
-				<img src={CLEANLOGO} className="intro-logo" />
+				<img src={CLEANLOGO} className="intro-logo" alt='clean-logo'/>
 			</div></>
 	)
 }

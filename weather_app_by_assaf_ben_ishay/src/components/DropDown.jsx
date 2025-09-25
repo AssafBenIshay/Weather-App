@@ -11,9 +11,9 @@ export default function DropDown({imperial,setImperial}) {
     return (
     <div className='units-dropdown-div'>
         <button className='drop-down' onClick={()=>setMenuOpen(!menuOpen)}>
-             <img src={UNITS} />
+             <img src={UNITS} alt='units'/>
              Units
-             <img src={DROP} />
+             <img src={DROP} alt='drop'/>
         </button> 
         {menuOpen && 
         <div className='units-menu' >

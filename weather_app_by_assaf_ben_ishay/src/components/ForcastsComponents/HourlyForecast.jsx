@@ -106,7 +106,7 @@ export default function HourlyForecast({
 					className="hourly-forecast-top-button"
 				>
 					{hasWD ? days[userSelectedDay] : "—"}
-					<img src={Chevron} />
+					<img src={Chevron} alt='chevron' />
 				</button>
 			</div>
 			{hasWD ? (
@@ -115,7 +115,7 @@ export default function HourlyForecast({
 						return (
 							<div className="hours-forecast-list-item" key={ind}>
 								<div className="hours-forecast-list-item-left">
-									<img src={hour.logo} />
+									<img src={hour.logo} alt='hourly forecast' />
 									<h3>{hour.time}</h3>
 								</div>
 								<p>{hour.temp}</p>

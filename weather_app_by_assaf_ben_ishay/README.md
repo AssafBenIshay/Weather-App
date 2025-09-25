@@ -4,21 +4,18 @@ This is a solution to the [Weather app challenge on Frontend Mentor](https://www
 
 ## Table of contents
 
--   [Frontend Mentor - Weather app solution](#frontend-mentor---weather-app-solution)
-    -   [Table of contents](#table-of-contents)
-    -   [Overview](#overview)
-        -   [The challenge](#the-challenge)
-        -   [Screenshot](#screenshot)
-        -   [](#)
-        -   [](#-1)
-        -   [](#-2)
-        -   [Links](#links)
-    -   [My process](#my-process)
-        -   [Built with](#built-with)
-        -   [What I learned](#what-i-learned)
-        -   [Continued development](#continued-development)
-            -   [Inkscape- - This software helped me edit the svg file in order to make the entry animation.](#inkscape------this-software-helped-me-edit-the-svg-file-in-order-to-make-the-entry-animation)
-    -   [Author](#author)
+- [Frontend Mentor - Weather app solution](#frontend-mentor---weather-app-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+        - [Inkscape- - This software helped me edit the svg file in order to make the entry animation.](#inkscape----this-software-helped-me-edit-the-svg-file-in-order-to-make-the-entry-animation)
+  - [Author](#author)
 
 ## Overview
 
@@ -42,9 +39,6 @@ Users should be able to:
 
 ![](./public/image1.PNG)
 
-![](./public/2.PNG)
-
-![](./public/3.PNG)
 
 ### Links
 

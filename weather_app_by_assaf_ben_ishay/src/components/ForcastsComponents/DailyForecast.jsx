@@ -36,7 +36,7 @@ export default function DailyForecast({hasMWD, meanWeatherData, imperial}) {
 							return (
 								<div className="daily-forecast-cube" key={index}>
 									<h4>{day.day}</h4>
-									<img src={day.icon} className="forecast-icon" />
+									<img src={day.icon} className="forecast-icon" alt='forecast-icon'/>
 									<div className="temp-div">
 										<h5>{`${
 											imperial

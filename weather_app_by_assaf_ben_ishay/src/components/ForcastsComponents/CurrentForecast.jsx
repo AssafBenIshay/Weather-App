@@ -36,7 +36,7 @@ export default function CurrentForecast({
 							<p>{todayDate}</p>
 						</div>
 						<div className="logo-and-temp">
-							<img src={weatherCode} />
+							<img src={weatherCode} alt="weather logo" />
 							<i>
 								{imperial ? Math.floor(Number(weatherTemp) * 1.8 + 32) : weatherTemp}°
 							</i>

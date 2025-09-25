@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --BB: 'Bricolage Grotesque';
+  --DM: 'DM sans';
+  --Neutral900: hsl(243, 96%, 9%);
+  --Neutral800: hsl(243, 27%, 20%);
+  --Neutral700: hsl(243, 23%, 24%);
+  --Neutral600: hsl(243, 23%, 30%);
+  --Neutral300: hsl(240, 6%, 70%);
+  --Neutral200: hsl(250, 6%, 84%);
+  --Neutral0: hsl(0, 0%, 100%);
+  --Orange500: hsl(28, 100%, 52%);
+  --Blue500: hsl(233, 67%, 56%);
+  --Blue700: hsl(248, 70%, 36%);
+
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  color:var(--Neutral0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button{
+  outline: none;
+  border: none;
+}
+
+h1{
+}
+
+

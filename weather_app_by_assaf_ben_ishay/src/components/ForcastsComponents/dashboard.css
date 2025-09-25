@@ -1,0 +1,663 @@
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 46px 110px 0 110px;
+    font-family: var(--DM);
+    justify-content: space-between;
+
+}
+
+.current-forecast {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('../../assets/images/bg-today-large.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 800px;
+    height: 286px;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.current-forecast-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 286px;
+    border-radius: 15px;
+    background-color: var(--Neutral800)
+}
+
+.loading-balls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@keyframes ball {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0px);
+    }
+
+    66% {
+        opacity: 0.7;
+        transform: translateY(-7px);
+    }
+
+    66% {
+        opacity: 0.2;
+        transform: translateY(7px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.ball {
+    font-size: 40px;
+    margin: 0 3px;
+
+
+}
+
+.loading-balls-p {
+    font-family: var(--DM);
+    font-size: 18px;
+    margin-bottom: 20px;
+
+}
+
+.ball1 {
+    animation: ball 1s 0.0s infinite;
+    animation-timing-function: linear
+}
+
+.ball2 {
+    animation: ball 1s 0.3s infinite;
+    animation-timing-function: linear;
+}
+
+.ball3 {
+    animation: ball 1s 0.6s infinite;
+    animation-timing-function: linear;
+}
+
+
+.current-forecast-loading-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-and-place>h2 {
+    font-size: 28px;
+    letter-spacing: 0.3px;
+    color: var(--Neutral100);
+}
+
+.time-and-place>p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--Neutral300);
+}
+
+.logo-and-temp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.logo-and-temp>img {
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+.logo-and-temp>i {
+    font-family: var(--DM);
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.current-forecast-details {
+    width: 800px;
+    height: 120px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.current-forecast-details-cube {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background-color: var(--Neutral800);
+    border-radius: 12px;
+
+}
+
+.current-forecast-details-cube>h4 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+
+}
+
+.current-forecast-details-cube>h1 {
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.daily-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 800px;
+    height: 180px;
+}
+
+.daily-forecast>h4 {
+    font-family: var(--DM);
+    font-weight: 550;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.daily-forecast-cube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 162px;
+    border-radius: 12px;
+    padding: 14px 18px;
+    background-color: var(--Neutral800);
+    padding: 16px 8px;
+}
+
+.daily-forecast-cube>h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.daily-forecast-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forecast-icon {
+    width: 60px;
+    margin-top: 16px;
+}
+
+.temp-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.temp-div>h5 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.hourly-forecast {
+    width: 384px;
+    height: 692px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--Neutral800);
+    border-radius: 18px;
+    padding: 20px 22px;
+    position: relative;
+}
+
+.hourly-forecast-top {
+    height: 38px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.hourly-forecast-top>h4 {
+    margin-left: 4px;
+    font-weight: 600;
+}
+
+.hourly-forecast-top>button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 38px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: var(--Neutral600);
+    color: var(--Neutral100);
+    font-size: 16px;
+    padding: 2px 10px;
+}
+
+.hours-forecast-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 18px
+}
+
+
+.hours-forecast-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    border: 0.5px solid var(--Neutral600);
+    background-color: var(--Neutral700);
+    margin-bottom: 16px;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.hours-forecast-list-item>p {
+    font-size: 16px;
+}
+
+
+.hours-forecast-list-item-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hours-forecast-list-item-left>img {
+    width: 42px;
+    height: 42px;
+
+}
+
+.hours-forecast-list-item-left>h3 {
+    padding: 6px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.search-result-empty-h2 {
+    font-size: 29px;
+    font-weight: 650;
+    font-family: var(--DM);
+    margin-top: 45px;
+}
+
+.hourly-forecast-top-button:hover {
+    cursor: pointer;
+    background-color: var(--Neutral700);
+    transition: all 0.2s ease-in-out;
+}
+
+.hourly-forecast-top-button:focus {
+    outline: 2px solid var(--Neutral0);
+    outline-offset: 3px;
+}
+
+
+.day-menu {
+    position: absolute;
+    top: 70px;
+    right: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 216px;
+    height: 316px;
+    background-color: var(--Neutral800);
+    border-radius: 12px;
+    padding: 10px 10px;
+    border: 0.5px solid var(--Neutral600);
+}
+
+.day-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    color: var(--Neutral100);
+    font-size: 16px;
+    padding: 6px 6px;
+}
+
+.day-menu-item:hover {
+    cursor: pointer;
+    background-color: var(--Neutral700);
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1250px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+
+    .current-forecast {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-self: center;
+        justify-content: space-between;
+        width: 600px;
+        height: auto;
+        background-image: url('../../assets/images/bg-today-large.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+    }
+
+    .current-forecast-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: auto;
+        justify-self: center;
+
+    }
+
+    .current-forecast-details-cube>h4 {
+        font-size: 18px;
+    }
+
+    .current-forecast-details-cube>h1 {
+        font-size: 28px;
+        text-wrap: nowrap;
+        word-wrap: normal;
+    }
+
+    .current-forecast-details-cube {
+        display: flex;
+        flex: 1;
+        min-height: 125px;
+    }
+
+    .daily-forecast>h4 {
+        font-size: 28px;
+    }
+
+    .daily-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: auto;
+        justify-self: center;
+    }
+
+    .daily-forecast-container {
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: auto;
+        justify-self: center;
+        gap: 30px;
+    }
+
+    .daily-forecast-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: auto;
+        justify-self: center;
+    }
+
+    .daily-forecast-cube>img {
+        width: 60px;
+    }
+
+    .daily-forecast-cube {
+        display: flex;
+        flex: 0.33;
+        min-height: 125px;
+        padding: 20px;
+    }
+
+    .hourly-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: auto;
+        justify-self: center;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 615px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .time-and-place {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+
+
+    .logo-and-temp {
+        padding: 7px 0px;
+    }
+
+    .logo-and-temp>i {
+        font-size: 96px;
+    }
+
+    .current-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 344px;
+        height: auto;
+        background-image: url('../../assets/images/bg-today-small.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 20px;
+    }
+
+    .current-forecast-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        width: 344px;
+        height: auto;
+        padding: 0px;
+        margin-top: 18px;
+        gap: 16px;
+    }
+
+    .current-forecast-details-cube>h4 {
+        color: var(--Neutral300)
+    }
+
+    .current-forecast-details-cube>h1 {
+        margin-top: 20px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-size: 28px;
+    }
+
+    .current-forecast-details-cube {
+        padding: 14px 20px;
+        min-height: 100px;
+    }
+
+    .daily-forecast>h4 {
+        margin: 0;
+        font-size: 20px;
+
+    }
+
+    .daily-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 344px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .daily-forecast-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 5px 0px;
+        margin: 10px 0;
+        gap: 16px;
+    }
+
+    .daily-forecast-cube>img {
+        margin-top: 16px;
+    }
+
+    .temp-div>h5 {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .daily-forecast-cube>h4 {
+        font-size: 18px;
+        margin-top: 6px;
+    }
+
+    .daily-forecast-cube {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0 9px;
+        box-sizing: border-box;
+        width: auto;
+        height: 166px;
+    }
+
+    .hourly-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 344px;
+        height: auto;
+        padding: 12px 18px 2px 18px;
+        margin: 18px;
+    }
+
+    .hourly-forecast-top>button {
+        font-family: var(--DM);
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .hourly-forecast-top {
+        margin-top: 3px;
+    }
+
+    .hourly-forecast-top>h4 {
+        margin-left: 0px;
+        font-size: 20px;
+    }
+
+    .hours-forecast-list-item {
+        padding: 5px 8px;
+    }
+
+
+}

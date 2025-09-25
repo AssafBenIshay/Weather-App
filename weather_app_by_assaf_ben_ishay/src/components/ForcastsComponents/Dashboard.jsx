@@ -49,36 +49,25 @@ export default function Dashboard({
 	React.useEffect(() => {
 		async function receiveWeatherData() {
 			const wd = await getWeatherAPI(latAndLon[0], latAndLon[1])
-			if (!wd) {
+			const mwd = await getMeanWeatherAPI(latAndLon[0], latAndLon[1])
+			if (!wd || !mwd || (!wd && !mwd)) {
 				setTimeout(() => {
 					setApiError(true)
-					return
-				}, 2000);
+					return false
+				}, 5000);
 			} else {
 				setWeatherData(wd)
 				setHasWD(true)
-			}
-		}
-
-		async function receiveMeanWeatherData() {
-			const mwd = await getMeanWeatherAPI(latAndLon[0], latAndLon[1])
-			if (!mwd) {
-				setTimeout(() => {
-					setApiError(true)
-					return
-				}, 5000);
-			} else {
 				setMeanWeatherData(mwd)
 				setHasMWD(true)
+
+				return true
 			}
 		}
-
 		if (searchOn) {
 			receiveWeatherData()
-			receiveMeanWeatherData()
 		}
 	}, [searchOn, latAndLon, setWeatherData, setApiError, setHasWD, setMeanWeatherData])
-	//}, [searchOn, latAndLon, setWeatherData]) //! before fix
 
 	React.useEffect(() => {
 		let currentOverThereHour = 0
@@ -97,8 +86,8 @@ export default function Dashboard({
 
 			function isPlusOneDaytime(latitude, dayOfYear) {
 				const pi = Math.PI
-				const P = Math.asin(0.39795 *Math.cos(0.2163108 + 2 * Math.atan(0.9671396 * Math.tan(0.0086 * (dayOfYear - 186)))))
-				const numerator =Math.sin((0.8333 * pi) / 180) + Math.sin((latitude * pi) / 180) * Math.sin(P)
+				const P = Math.asin(0.39795 * Math.cos(0.2163108 + 2 * Math.atan(0.9671396 * Math.tan(0.0086 * (dayOfYear - 186)))))
+				const numerator = Math.sin((0.8333 * pi) / 180) + Math.sin((latitude * pi) / 180) * Math.sin(P)
 				const denominator = Math.cos((latitude * pi) / 180) * Math.cos(P)
 				const daylightHours = 24 - (24 / pi) * Math.acos(numerator / denominator)
 
@@ -147,7 +136,7 @@ export default function Dashboard({
 		</>
 	) : (
 		<div>
-				<h2 className="search-result-empty-h2">{introAnimation ? "Search for a city" : "No search result found!"}</h2>
+			<h2 className="search-result-empty-h2">{introAnimation ? "Search for a city" : "No search result found!"}</h2>
 		</div>
 	)
 }

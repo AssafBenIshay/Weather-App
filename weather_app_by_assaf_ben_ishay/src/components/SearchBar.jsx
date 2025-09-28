@@ -34,10 +34,10 @@ export default function SearchBar({
 	 */
 	function SearchBar(e) {
 		setHasInpt(e.target.value ? true : false)
-		setVal(e.target.value.toLowerCase())
+		setVal(e.target.value)
 
 		const list = cities.filter((city) =>
-			city.toLowerCase().includes(e.target.value)
+			city.toLowerCase().includes(e.target.value.toLowerCase())
 		)
 		const shortenedList = list.slice(0, 10)
 

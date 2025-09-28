@@ -34,7 +34,7 @@ export default function SearchBar({
 	 */
 	function SearchBar(e) {
 		setHasInpt(e.target.value ? true : false)
-		setVal(e.target.value)
+		setVal(e.target.value.toLowerCase())
 
 		const list = cities.filter((city) =>
 			city.toLowerCase().includes(e.target.value)
